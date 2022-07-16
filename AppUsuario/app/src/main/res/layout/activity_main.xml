@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Título indicando Categorias -->
+        <TextView
+            android:id="@+id/titulo_categoria_tela_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Categorias"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- CardViews HorizontalScrollView -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView_tela_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo_categoria_tela_inicio"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <!-- CardViews -->
+            <LinearLayout
+                android:id="@+id/cardView_tela_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- CardView 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria1_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/restaurant_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ImageContrastCheck" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria2_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/mercado_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ImageContrastCheck" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria3_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/fast_food_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 4 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria4_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/farmacia_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ImageContrastCheck" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 5 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria5_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/musculacao_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 6 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria6_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/shopping_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 7 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria7_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/manutecao_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 8 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria8_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/deposito_construcao_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 9 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria9_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/brinquedos_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 10 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria10_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/salao_beleza_barbearia_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView 11 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_categoria11_tela_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/image_card11"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/livraria_categ"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Título indicando Destaque -->
+        <TextView
+            android:id="@+id/titulo_destaque_tela_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Destaques"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView_tela_inicio" />
+
+        <!-- Banner 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/banner1_cardView_tela_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo_destaque_tela_inicio">
+
+            <ImageView
+                android:id="@+id/banner1_tela_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pride_day_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Banner 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/banner2_cardView_tela_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/purple_200"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner1_cardView_tela_inicio">
+
+            <ImageView
+                android:id="@+id/banner2_tela_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/oferta1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Banner 3 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/banner3_cardView_tela_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/teal_700"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner2_cardView_tela_inicio">
+
+            <ImageView
+                android:id="@+id/banner3_tela_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pesquisa1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
