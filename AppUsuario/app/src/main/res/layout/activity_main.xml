@@ -47,7 +47,7 @@
 
                 <!-- CardView 1 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria1_tela_inicio"
+                    android:id="@+id/cardView_categoria01_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -70,7 +70,7 @@
 
                 <!-- CardView 2 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria2_tela_inicio"
+                    android:id="@+id/cardView_categoria02_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -93,7 +93,7 @@
 
                 <!-- CardView 3 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria3_tela_inicio"
+                    android:id="@+id/cardView_categoria03_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -115,7 +115,7 @@
 
                 <!-- CardView 4 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria4_tela_inicio"
+                    android:id="@+id/cardView_categoria04_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -138,7 +138,7 @@
 
                 <!-- CardView 5 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria5_tela_inicio"
+                    android:id="@+id/cardView_categoria05_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -160,7 +160,7 @@
 
                 <!-- CardView 6 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria6_tela_inicio"
+                    android:id="@+id/cardView_categoria06_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -182,7 +182,7 @@
 
                 <!-- CardView 7 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria7_tela_inicio"
+                    android:id="@+id/cardView_categoria07_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -204,7 +204,7 @@
 
                 <!-- CardView 8 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria8_tela_inicio"
+                    android:id="@+id/cardView_categoria08_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -226,7 +226,7 @@
 
                 <!-- CardView 9 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView_categoria9_tela_inicio"
+                    android:id="@+id/cardView_categoria09_tela_inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -292,7 +292,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- Título indicando Destaque -->
+        <!-- Título Destaque -->
         <TextView
             android:id="@+id/titulo_destaque_tela_inicio"
             android:layout_width="match_parent"
@@ -306,9 +306,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/horizontalScrollView_tela_inicio" />
 
-        <!-- Banner 1 -->
+        <!-- Banner Destaque 1 -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/banner1_cardView_tela_inicio"
+            android:id="@+id/banner1_tela_inicio"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginStart="20dp"
@@ -320,7 +320,7 @@
             app:layout_constraintTop_toBottomOf="@id/titulo_destaque_tela_inicio">
 
             <ImageView
-                android:id="@+id/banner1_tela_inicio"
+                android:id="@+id/banner1_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="false"
@@ -332,9 +332,9 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Banner 2 -->
+        <!-- Banner Destaque 2 -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/banner2_cardView_tela_inicio"
+            android:id="@+id/banner2_tela_inicio"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginStart="20dp"
@@ -343,10 +343,10 @@
             app:cardBackgroundColor="@color/purple_200"
             app:cardCornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/banner1_cardView_tela_inicio">
+            app:layout_constraintTop_toBottomOf="@id/banner1_tela_inicio">
 
             <ImageView
-                android:id="@+id/banner2_tela_inicio"
+                android:id="@+id/banner2_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="false"
@@ -358,9 +358,9 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Banner 3 -->
+        <!-- Banner Destaque 3 -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/banner3_cardView_tela_inicio"
+            android:id="@+id/banner3_tela_inicio"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginStart="20dp"
@@ -369,10 +369,10 @@
             app:cardBackgroundColor="@color/teal_700"
             app:cardCornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/banner2_cardView_tela_inicio">
+            app:layout_constraintTop_toBottomOf="@id/banner2_tela_inicio">
 
             <ImageView
-                android:id="@+id/banner3_tela_inicio"
+                android:id="@+id/banner3_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="false"

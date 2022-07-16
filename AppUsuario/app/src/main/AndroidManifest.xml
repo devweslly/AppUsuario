@@ -10,6 +10,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppUsuario">
         <activity
+            android:name=".ListProdBannerActivity03"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdBannerActivity02"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdBannerActivity01"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity11"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity10"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity09"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity08"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity07"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity06"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity05"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity04"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity03"
+            android:exported="false" />
+        <activity
+            android:name=".ListProdCategActivity02"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,6 +57,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListProdCategActivity01"
+            android:exported="false" />
     </application>
 
 </manifest>
