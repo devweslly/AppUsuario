@@ -187,7 +187,102 @@ package com.example.appusuario
 
     ** Implementar getItemCount() **
 
-    * Continuar da daqui (parte 4)
+    * O método getItemCount() precisa retornar o tamanho do conjunto de dados. Os dados do app estão
+    * na propriedade dataset que você está transmitindo ao construtor do ItemProduto01Adapter,
+    * e você pode acessar o tamanho usando size.
+    * dentro do getItemCount()   insira: return dataset.size
+
+    # 7
+    ** Implementar onCreateViewHolder() **
+
+    * O método onCreateViewHolder() é chamado pelo gerenciador de layout para criar novos armazenadores
+    * de visualização para o RecyclerView (quando não há armazenadores de visualização existentes que
+    * possam ser reutilizados). Lembre-se de que um armazenador de visualização representa uma única
+    * visualização de item da lista.
+
+    * O método onCreateViewHolder() usa dois parâmetros e retorna um novo ViewHolder.
+        * Um parâmetro parent, que é a visualização em grupo a que a nova visualização de
+        * item da lista será anexada como filha. O RecyclerView é a visualização mãe.
+
+        * Um parâmetro viewType que se torna importante quando há vários tipos de visualização
+        * de itens no mesmo RecyclerView.
+        * Se você tiver diferentes layouts de item de lista sendo exibidos no RecyclerView, há diferentes
+        * tipos de visualização de itens. Só é possível reciclar visualizações com o mesmo tipo
+        * de visualização de item. No seu caso, há somente um layout de item de lista
+        * e um tipo de visualização de item,  portanto, você não precisa se preocupar com esse parâmetro.
+
+    * No método onCreateViewHolder(), acesse uma instância do LayoutInflater
+    * com o contexto fornecido (context do parent). O inflador de layout sabe como inflar
+    * um layout XML em uma hierarquia de objetos de visualização.
+
+    * Quando você tiver uma instância de objeto LayoutInflater, adicione um ponto seguido por outra
+    * chamada de método para inflar a visualização real do item da lista. Transmita o ID do recurso
+    * de layout XML R.layout.list_item e a visualização em grupo parent. O terceiro argumento booleano
+    * será attachToRoot. Esse argumento precisa ser false, porque o RecyclerView adicionará esse item
+    * à hierarquia de visualização no momento certo.
+
+    * Agora, o adapterLayout contém uma referência para a visualização do item da lista
+    * (em que poderemos encontrar visualizações filhas, como a TextView, depois).
+
+    * No método onCreateViewHolder(), retorne uma nova instância do ItemProduto01ViewHolder em que a
+    * visualização raiz seja o adapterLayout.
+
+    # 8
+    ** Implementar onBindViewHolder() **
+
+    * O último método que você precisa substituir é onBindViewHolder(). Esse método é chamado pelo
+    * gerenciador de layout para substituir o conteúdo de uma visualização de item de lista.
+
+    * O método onBindViewHolder() tem dois parâmetros, um ItemProduto01ViewHolder criado anteriormente
+    * pelo método onCreateViewHolder() e um int que representa a position do item atual na lista.
+    * Neste método, você encontrará o objeto Affirmation correto do conjunto de dados com base na posição.
+
+    * No método onBindViewHolder(), crie um val itemProduto01 e acesse o item na position especificada no dataset.
+
+    * Por fim, é necessário atualizar todas as visualizações referenciadas pelo titular da visualização
+    * para refletir os dados corretos desse item. Nesse caso, há apenas uma visualização:
+    * a TextView no ItemViewHolder. Defina o texto da TextView para exibir a string Produto01 desse item.
+
+    * Com uma instância de objeto Produto01, é possível encontrar o ID de recurso de string
+    * correspondente chamando itemProduto01.stringResourceId. No entanto, ele é um número inteiro e você
+    * precisa encontrar o mapeamento para o valor real da string.
+
+    * No framework do Android, é possível chamar o método getString() com um ID de recurso de string
+    * e ele retornará o valor da string associado a ele. getString() é um método da classe Resources,
+    * e é possível acessar uma instância da classe Resources com o context.
+
+    * Isso significa que é possível chamar context.resources.getString() e transmitir um ID de recurso
+    * da string. A string resultante pode ser definida como o text da textView no holder do
+    * ItemProduto01ViewHolder. Resumidamente, essa linha de código atualiza o armazenador de visualização para
+    * mostrar a string de afirmação.
+
+    * adaptador finalizado (ItemProduto01Adapter.kt)
+    * Agora que você implementou o ItemProduto01Adapter, é necessário instruir o RecyclerView a usar esse adaptador.
+
+    *** Modificar a ListProdCategActivity01 para usar um RecyclerView ***
+
+    * Para terminar, é necessário usar suas classes Datasource e ItemProduto01Adapter para criar
+    * e exibir itens no RecyclerView. Faça isso na ListProdCategActivity01.
+
+    * Na ListProdCategActivity01,, acesse o método onCreate(). Insira o novo código descrito nas etapas
+    * a seguir após a chamada para setContentView(R.layout.activity_list_prod_categ01).
+
+    * Crie uma instância da Datasource e chame o método loadProduto01() nela.
+    * Armazene a lista retornada de afirmações em uma val com o nome myDataset.
+
+    * Crie uma variável com o nome recyclerView e use findViewById() para encontrar uma referência
+    * ao RecyclerView no layout.
+
+    * Para instruir o recyclerView a usar a classe ItemAdapter que você criou, crie uma
+    * nova instância ItemProduto01Adapter. O ItemProduto01Adapter espera dois parâmetros: o contexto (this)
+    * da atividade e as afirmações em myDataset.
+
+    * Atribua o objeto ItemProduto01Adapter à propriedade adapter do recyclerView.
+
+    * Como o tamanho do layout do RecyclerView é fixo no layout da atividade, é possível definir o
+    * parâmetro setHasFixedSize do RecyclerView como true. Essa configuração só é necessária para
+    * melhorar o desempenho. Use essa configuração se você souber que as mudanças no conteúdo não
+    * mudarão o tamanho do layout do RecyclerView.
 */
 
 
