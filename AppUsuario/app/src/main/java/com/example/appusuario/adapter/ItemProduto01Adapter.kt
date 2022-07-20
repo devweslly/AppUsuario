@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appusuario.R
@@ -22,7 +23,10 @@ class ItemProduto01Adapter(
     // you provide access to all the views for a data item in a view holder.
     // Each data item is just an Produto01 object.
     class ItemProduto01ViewHolder(private val view: View) : RecyclerView.ViewHolder(view){
-        val textView: TextView = view.findViewById(R.id.card_layout_title)
+        val textView: TextView = view.findViewById(R.id.item_card_layout_title_categ1)
+        val imageView: ImageView = view.findViewById(R.id.item_card_layout_image_categ1)
+        val description: TextView = view.findViewById(R.id.item_card_layout_description_categ1)
+        val adress: TextView = view.findViewById(R.id.item_card_layout_adress_categ1)
     }
 
     /**
@@ -44,6 +48,9 @@ class ItemProduto01Adapter(
     override fun onBindViewHolder(holder: ItemProduto01ViewHolder, position: Int) {
         val itemProduto01 = dataset[position]
         holder.textView.text = context.resources.getString(itemProduto01.stringResourceId)
+        holder.imageView.setImageResource(itemProduto01.imageResourceId)
+        holder.description.text = context.resources.getString(itemProduto01.descriptionResourceId)
+        holder.adress.text = context.resources.getString(itemProduto01.adressResourceId)
     }
 
     /**

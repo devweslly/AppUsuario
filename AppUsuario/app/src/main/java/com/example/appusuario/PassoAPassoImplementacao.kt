@@ -283,6 +283,61 @@ package com.example.appusuario
     * parâmetro setHasFixedSize do RecyclerView como true. Essa configuração só é necessária para
     * melhorar o desempenho. Use essa configuração se você souber que as mudanças no conteúdo não
     * mudarão o tamanho do layout do RecyclerView.
+
+    *** Adicionar suporte a imagens na classe Produto01 ***
+
+    * Nesta etapa, você adicionará uma propriedade na classe de dados Produto01 para armazenar
+    * um valor para um ID de recurso de imagem. Dessa forma, uma única instância do objeto
+    * Produto01 conterá um ID de recurso para o texto e outro para a imagem da afirmação.
+
+    * Modifique o construtor da classe Produto01 adicionando outro parâmetro Int com o nome imageResourceId.
+
+    ** Como usar anotações de recurso **
+
+    * Ambos stringResourceId e imageResourceId são valores inteiros. Embora isso funcione,
+    * o autor da chamada poderia transmitir os argumentos na ordem errada
+    * (imageResourceId primeiro em vez de stringResourceId) acidentalmente.
+
+    * Para evitar isso, é possível usar anotações de recurso. As anotações são úteis porque adicionam
+    * informações a classes, métodos ou parâmetros. As anotações são sempre declaradas com um
+    * símbolo @. Nesse caso, adicione a anotação @StringRes à sua propriedade de ID de
+    * recurso de string e a anotação @DrawableRes à sua propriedade de ID de recurso de drawable.
+    * Em seguida, você receberá um alerta se fornecer o tipo errado de ID de recurso.
+
+    * Adicione a anotação @StringRes a stringResourceId.
+    * Adicione a anotação @DrawableRes a imageResourceId.
+    * Verifique se as importações androidx.annotation.DrawableRes e androidx.annotation.StringRes foram
+    * adicionadas na parte superior do arquivo após a declaração do pacote.
+
+    ** Inicializar a lista de produtos com imagens **
+
+    * Agora que você mudou o construtor da classe Produto01, é preciso atualizar a classe Datasource.
+    * Transmita um ID do recurso de imagem para cada objeto Produto01 inicializado.
+
+    * Em Datasource.kt, Para cada Produto01, adicione o ID do recurso de uma imagem como um
+    * argumento, como R.drawable.ic_baseline_image_24.
+
+    ** Adicionar uma ImageView ao layout do item da lista **
+
+    * Para mostrar uma imagem para cada afirmação da sua lista, é preciso adicionar uma ImageView
+    * ao layout do card_layout_produto01. Como agora você tem duas visualizações, TextView e ImageView,
+    * é necessário colocá-las como visualizações filhas em um ViewGroup.
+
+    ** Atualizar o ItemAdapter para definir a imagem **
+
+    * Abra adapter/ItemProduto01Adapter.kt
+    * Acesse a classe ItemProduto01ViewHolder
+
+    * Uma instância ItemProduto01ViewHolder precisa conter uma referência à TextView e à ImageView
+    * no layout do item da lista. Faça a mudança a seguir.
+
+    * Abaixo da inicialização da propriedade textView, adicione uma val com o nome imageView.
+    * Use findViewById() para encontrar a referência à ImageView com o ID item_image e
+    * atribua à propriedade imageView.
+
+    * Localize a função onBindViewHolder() no ItemProduto01Adapter.
+    * Anteriormente, você definiu o stringResourceId do produto como textView no ItemProduto01ViewHolder.
+    * Agora, defina o imageResourceId do item do produto no ImageView da visualização do item da lista.
 */
 
 
