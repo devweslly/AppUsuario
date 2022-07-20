@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appusuario.R
+import com.example.appusuario.databinding.CardLayoutProduto01Binding
 import com.example.appusuario.model.Produto01
 
 /*
@@ -22,11 +23,13 @@ class ItemProduto01Adapter(
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder.
     // Each data item is just an Produto01 object.
-    class ItemProduto01ViewHolder(private val view: View) : RecyclerView.ViewHolder(view){
-        val textView: TextView = view.findViewById(R.id.item_card_layout_title_categ1)
-        val imageView: ImageView = view.findViewById(R.id.item_card_layout_image_categ1)
-        val description: TextView = view.findViewById(R.id.item_card_layout_description_categ1)
-        val adress: TextView = view.findViewById(R.id.item_card_layout_adress_categ1)
+    class ItemProduto01ViewHolder(val binding: CardLayoutProduto01Binding) : RecyclerView.ViewHolder(binding.root){
+        /*
+        val textView: TextView = binding.itemCardLayoutTitleCateg1
+        val imageView: ImageView = binding.itemCardLayoutImageCateg1
+        val description: TextView = binding.itemCardLayoutDescriptionCateg1
+        val adress: TextView = binding.itemCardLayoutAdressCateg1
+        */
     }
 
     /**
@@ -35,10 +38,11 @@ class ItemProduto01Adapter(
     // # 7
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemProduto01ViewHolder {
         // cria uma nova view
-        val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_layout_produto01, parent, false)
-
-        return ItemProduto01ViewHolder(adapterLayout)
+        return ItemProduto01ViewHolder(CardLayoutProduto01Binding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        ))
     }
 
     /**
@@ -47,10 +51,11 @@ class ItemProduto01Adapter(
     // # 8
     override fun onBindViewHolder(holder: ItemProduto01ViewHolder, position: Int) {
         val itemProduto01 = dataset[position]
-        holder.textView.text = context.resources.getString(itemProduto01.stringResourceId)
-        holder.imageView.setImageResource(itemProduto01.imageResourceId)
-        holder.description.text = context.resources.getString(itemProduto01.descriptionResourceId)
-        holder.adress.text = context.resources.getString(itemProduto01.adressResourceId)
+
+        holder.binding.itemCardLayoutTitleCateg1.text = itemProduto01.stringResourceId
+        holder.binding.itemCardLayoutImageCateg1.setImageResource(itemProduto01.imageResourceId)
+        holder.binding.itemCardLayoutDescriptionCateg1.text = itemProduto01.descriptionResourceId
+        holder.binding.itemCardLayoutAdressCateg1.text = itemProduto01.adressResourceId
     }
 
     /**

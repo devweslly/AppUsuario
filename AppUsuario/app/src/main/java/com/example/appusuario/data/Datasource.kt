@@ -9,16 +9,66 @@ class Datasource {
     fun loadProduto01(): List<Produto01> {
         // #4
         return listOf<Produto01>(
-            Produto01(R.string.titulo1, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo2, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo3, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo4, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo5, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo6, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo7, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo8, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo9, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
-            Produto01(R.string.titulo10, R.drawable.ic_baseline_image_24, R.id.item_card_layout_description_categ1, R.id.item_card_layout_adress_categ1),
+            Produto01(
+                stringResourceId = "Produto 01",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 01"
+            ),
+            Produto01(
+                stringResourceId = "Produto 02",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 02"
+            ),
+            Produto01(
+                stringResourceId = "Produto 03",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 03"
+            ),
+            Produto01(
+                stringResourceId = "Produto 04",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 04"
+            ),
+            Produto01(
+                stringResourceId = "Produto 05",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 05"
+            ),
+            Produto01(
+                stringResourceId = "Produto 06",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 06"
+            ),
+            Produto01(
+                stringResourceId = "Produto 07",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 07"
+            ),
+            Produto01(
+                stringResourceId = "Produto 08",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 08"
+            ),
+            Produto01(
+                stringResourceId = "Produto 09",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 09"
+            ),
+            Produto01(
+                stringResourceId = "Produto 10",
+                imageResourceId = R.drawable.ic_baseline_image_24,
+                descriptionResourceId = "Produto XPTO",
+                adressResourceId = "Endereço 10"
+            ),
         )
     }
 }
